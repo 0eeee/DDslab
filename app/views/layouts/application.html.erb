@@ -22,9 +22,15 @@
 
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#about">News</a></li>
-            <li class="active"><a href="#about">Contents</a></li>
-            <li class="active"><a href="#contact">Podcast</a></li>
+            <li class="<%= params[:bulletin_id] == '1' ? 'active' : '' %>"><%= link_to 'News & Column', bulletin_posts_path('1') %></li>
+            <li class="<%= params[:bulletin_id] == '4' ? 'active' : '' %>"><%= link_to 'Literature', bulletin_posts_path('4') %></li>
+            <li class="<%= params[:bulletin_id] == '2' ? 'active' : '' %>"><%= link_to 'Web Contents', bulletin_posts_path('2') %></li>
+            <li class="<%= params[:bulletin_id] == '3' ? 'active' : '' %>"><%= link_to 'Podcast', bulletin_posts_path('3') %></li>
+            <li class="<%= params[:bulletin_id] == '5' ? 'active' : '' %>"><%= link_to 'Paju', bulletin_posts_path('5') %></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class= 'active' : ''><%= link_to 'About', root_path %></li>
+            <li class= 'active' : ''><%= link_to 'Contact', root_path %></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

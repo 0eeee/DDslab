@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
 
+
+  get 'about/index'
+
+  resources :bulletins do
+    resources :posts
+  end
+  resources :bulletins do
+    resources :maps
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
